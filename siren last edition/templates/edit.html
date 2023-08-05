@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+     {% block css %}{% endblock css %}
+     <link rel="stylesheet" type="text/css" href="style.css">
+     <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css')}}">
+    <title>add-driver</title>
+</head>
+<body>
+    <div class="container mt-3">
+
+        <div class="row">
+        
+        
+        <div class="col-md-3">
+        
+        </div>
+        
+        <div class="col-md-6 ">
+         
+        <h4 class="text-center  text-danger">Update Driver</h4>
+      
+        
+      
+        
+<form action="/edit/{{posts.did}}" method="post" class="jumbotron">
+
+    <div class="form-group">
+         <input type="email" class="form-control" id="email" value={{current_user.email}} name="email" required>
+    </div>
+  
+    <div class="form-group">
+        <input type="text" class="form-control" id="name" value={{posts.name}} name="name" placeholder="Full Name" required>
+    </div>
+    <div class="form-group">
+        <select class="form-control" id="gender"  name="gender"  required>
+          <option selected>{{posts.gender}}</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Others">Others</option>
+   
+        </select>
+     </div>
+  
+    <div class="form-group">
+        <input type="text" class="form-control" id="Aadhar number" value={{posts.aadhar}} name="aadhar" placeholder="Aadhar number" required>
+    </div>
+    <div class="form-group">
+        <input type="number" class="form-control" id="number" value={{posts.number}} name="number" placeholder="Phone Number" required>
+    </div>
+  
+    
+    <button type="submit" class="btn btn-success btn-sm btn-block">Update</button>
+  </form>
+   Not Needed <a href="/driver">Go back</a> !
+  
+  
+        
+       
+       
+        
+        </div>
+        
+        <div class="col-md-4">
+        
+        </div>
+        
+        
+        </div>
+        
+        </div>
+    
+</body>
+</html>
+
+
+
+
+
